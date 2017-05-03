@@ -1,0 +1,13 @@
+<h1 align='center'>Insta Rails Users</h1>
+<div class='row wrapper'>
+  <div class=' col-md-8 col-md-offset-2'>
+    <div align='center'>
+      <% @users.each do |user| %>
+        <div class='well cust-users'>
+          <h2><%= link_to "#{user.first_name}", user %> </h2>
+
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
