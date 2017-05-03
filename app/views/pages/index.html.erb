@@ -1,1 +1,11 @@
 <h1>This is the homepage</h1>
+<nav>
+  <% if user_signed_in? %>
+
+    <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+    <%= link_to('Edit Profile', edit_user_registration_path) %>
+  <% else %>
+    <%= link_to('Login', new_user_session_path)  %>
+    <%= link_to('SignUp', new_user_registration_path)  %>
+  <% end %>
+</nav>
