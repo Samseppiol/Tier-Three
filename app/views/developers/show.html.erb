@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @developer.user %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @developer.location %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @developer.description %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @developer.price %>
+</p>
+
+<p>
+  <strong>Rating:</strong>
+  <%= @developer.rating %>
+</p>
+
+<%= link_to 'Edit', edit_developer_path(@developer) %> |
+<%= link_to 'Back', developers_path %>
