@@ -1,6 +1,10 @@
 $navbar-default-bg: #1193FF;
 
-
-.nav-cust a {
+#logo {
   color: white;
 }
+
+
+.navbar-default .navbar-nav > li > a {
+   color: white; /*Change active text color here*/
+    }
