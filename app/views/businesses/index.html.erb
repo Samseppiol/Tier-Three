@@ -27,6 +27,6 @@
 </table>
 
 <br>
-<% if user.business %>
+<% if user_signed_in? %>
   <%= link_to 'New Business', new_business_path %>
 <% end %>
