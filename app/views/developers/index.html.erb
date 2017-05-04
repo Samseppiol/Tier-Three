@@ -19,17 +19,21 @@
       <tr>
         <td><%= developer.user.first_name %></td>
         <td><%= developer.location %></td>
+        <td><%= developer.image %></td>
         <td><%= developer.description %></td>
         <td><%= developer.price %></td>
         <td><%= developer.rating %></td>
-        <td><%= link_to 'Show', developer %></td>
-        <td><%= link_to 'Edit', edit_developer_path(developer) %></td>
-        <td><%= link_to 'Destroy', developer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% if user_signed_in? && current_user %>
+          <td><%= link_to 'Show', developer %></td>
+          <td><%= link_to 'Edit', edit_developer_path(developer) %></td>
+          <td><%= link_to 'Destroy', developer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-
-<%= link_to 'New Developer', new_developer_path %>
+<% if user_signed_in? %>
+  <%= link_to 'New Developer', new_developer_path %>
+<% end %>
