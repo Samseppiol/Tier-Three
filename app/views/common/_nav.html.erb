@@ -17,6 +17,9 @@
       <ul class="nav navbar-nav nav-cust">
         <li><%= link_to 'Listings', root_path %></li>
         <li><%= link_to 'Developers', root_path %> </li>
+        <% if user_signed_in? %>
+          <li><%= link_to 'Businesses', businesses_path %> </li>
+        <% end %>
 
 
           </ul>
